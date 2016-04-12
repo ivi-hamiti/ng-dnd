@@ -1,2 +1,4 @@
-dnd-all-min.js
-ios-dnd-min.js
+angular-dnd.js
+angular-dnd-touch.js
+angular-dnd.min.js
+angular-dnd-touch.min.js

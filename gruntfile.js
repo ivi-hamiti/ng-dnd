@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                         'src/dndDraggable.js',
                         'src/dndDroppable.js'
                     ],
-                    'examples/angular-dnd-ios.min.js': [
+                    'examples/angular-dnd-touch.min.js': [
                         'lib/ios-drag-drop.js'
                     ]
                 }
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
             },
             ngDndTouch: {
                 src: ['lib/ios-drag-drop.js'],
-                dest: 'examples/angular-dnd-ios.js'
+                dest: 'examples/angular-dnd-touch.js'
             }
         }
     });
