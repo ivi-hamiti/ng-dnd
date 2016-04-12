@@ -6,11 +6,14 @@
   "directories": {
     "example": "examples"
   },
-  "dependencies": {},
+  "dependencies": {
+    "grunt-closure-wrap": "^0.1.1",
+    "grunt-contrib-concat": "^1.0.0"
+  },
   "devDependencies": {
-    "grunt":                 "*",
+    "grunt": "*",
     "grunt-contrib-connect": "*",
-    "grunt-contrib-uglify":  "*",
-    "grunt-contrib-jshint":  "*"
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-jshint": "*"
   }
 }
