@@ -1,5 +1,5 @@
 angular
-    .module('app', ['dnd'])
+    .module('app', ['ngDnd'])
     .controller('AppCtrl', AppCtrl);
 
 function AppCtrl($scope) {
@@ -7,9 +7,9 @@ function AppCtrl($scope) {
 
     var vm = this;
 
-    vm.list_1 = items().slice(0,3);
-    vm.list_2 = items().slice(3,5);
-    vm.list_3 = items().slice(5,7);
+    vm.list_1 = items().slice(0, 3);
+    vm.list_2 = items().slice(3, 5);
+    vm.list_3 = items().slice(5, 7);
 
     vm.dragModel = dragModel;
     vm.dropModel = dropModel;
@@ -23,32 +23,32 @@ function AppCtrl($scope) {
             return dragModels[item.text];
         } else {
             var model = {
-                list:list,
+                list: list,
 
-                data: function () {
+                data: function() {
                     // dnd payload e.g. {text:'R',color:'red'}
                     return item;
                 },
-                isDraggable: function () {
+                isDraggable: function() {
                     // don't allow big box to become empty
                     return list.length > 1;
                 },
-                dragStart: function (el) {
+                dragStart: function(el) {
                     // give dagged item dotted border
                     el.css('border-style', 'dotted');
                 },
-                dragDrop: function (data) {
+                dragDrop: function(data) {
                     // remove dropped item from source list
                     list.splice(list.indexOf(data), 1);
                     delete dragModels[data.text];
                     $scope.$apply();
                 },
-                dragEnd: function (el) {
+                dragEnd: function(el) {
                     // restore dragged item's solid border
                     el.css('border-style', 'solid');
                 }
             };
-            dragModels[item.text] = model;
+            dragModels[item.text] = model;
             return model;
         }
     }

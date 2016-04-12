@@ -1,5 +1,5 @@
 angular
-    .module('dnd')
+    .module('ngDnd')
     .service('dndData', dndData);
 
 function dndData() {

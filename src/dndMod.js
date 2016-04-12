@@ -1,2 +1,2 @@
 angular
-    .module('dnd', []);
+    .module('ngDnd', []);

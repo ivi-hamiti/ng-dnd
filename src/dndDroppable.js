@@ -1,5 +1,5 @@
 angular
-    .module('dnd')
+    .module('ngDnd')
     .directive('dndDroppable', ['$log', '$timeout', 'dndData',  dndDroppable]);
 
 function dndDroppable($log, $timeout, dndData) {
